@@ -41,7 +41,8 @@ func (b *BrokerOperations) Catalog() *openservicebroker.Response {
 		Tags:        []string{"mobile", "android"},
 		Bindable:    false,
 		Metadata: map[string]interface{}{
-			"displayName": "Android Starter",
+			"displayName":                    "Android App",
+			"console.openshift.io/iconClass": "fa fa-android",
 		},
 		Plans: []openservicebroker.Plan{
 			openservicebroker.Plan{
@@ -80,10 +81,11 @@ func (b *BrokerOperations) Catalog() *openservicebroker.Response {
 		Name:        "ios-app",
 		ID:          "serviceIodUUID",
 		Description: "start an ios application.",
-		Tags:        []string{"mobile", "android"},
+		Tags:        []string{"mobile", "ios", "apple"},
 		Bindable:    false,
 		Metadata: map[string]interface{}{
-			"displayName": "iOS Starter",
+			"displayName":                    "iOS App",
+			"console.openshift.io/iconClass": "fa fa-apple",
 		},
 		Plans: []openservicebroker.Plan{
 			openservicebroker.Plan{
